@@ -1,0 +1,143 @@
+.dash-board-content{
+    height: 100vh;
+}
+.task-list {
+    display: flex;
+    gap: 30px;
+    padding: 0vw 9vw;
+}
+
+.taskassgin {
+    padding: 1vw 2vw;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 150px;
+    width: 300px;
+    background-color: rgb(43, 116, 233);
+}
+
+.taskpendin {
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    height: 150px;
+    width: 300px;
+    background-color: rgb(227, 211, 82);
+}
+
+.taskcompelete {
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    height: 150px;
+    width: 300px;
+    background-color: rgb(90, 129, 61)
+}
+
+.taskfaild {
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    height: 150px;
+    width: 300px;
+    background-color: rgb(232, 108, 84)
+}
+
+#content-area h3 {
+    font-size: 3vw;
+}
+
+#content-area h1 {
+    margin-top: 1.5vw;
+}
+
+.All-task-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    height: 20vw;
+    margin: 2vw 9vw;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+#task-box {
+    border-radius: 20px;
+    height: 300px;
+    width: 450px;
+    padding: 1vw 2vw;
+}
+
+.tbox1 {
+    flex-shrink: 0;
+    background-color: crimson;
+}
+
+.tbox2 {
+    flex-shrink: 0;
+    background-color: rgb(52, 73, 236);
+}
+
+.tbox3 {
+    flex-shrink: 0;
+    background-color: rgb(179, 116, 128);
+}
+
+.tbox4 {
+    flex-shrink: 0;
+    background-color: rgba(247, 223, 68, 0.903);
+}
+
+.tbox5 {
+    flex-shrink: 0;
+    background-color: rgb(217, 244, 84);
+}
+
+.tbox6 {
+    flex-shrink: 0;
+    background-color: rgb(107, 211, 169);
+}
+
+.tbox7 {
+    flex-shrink: 0;
+    background-color: rgb(147, 222, 96);
+}
+
+.projectType {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.WorkType {
+    padding: 0.5vw 0.5vw;
+    border-radius: 8px;
+    background-color: rgb(180, 58, 41);
+}
+
+.projectContent h1 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.projectContent p {
+    text-align: justify;
+    margin-top: 12px;
+    align-items: center;
+    margin-left: 9px;
+    width: 24vw;
+    height: 9vw;
+    color: rgb(221, 242, 242);
+}
+
+.markComplete {
+    margin-left: 16vw;
+}
+
+.markComplete button {
+    border: none;
+    padding: 4px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+}

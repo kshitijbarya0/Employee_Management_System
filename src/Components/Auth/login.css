@@ -1,0 +1,84 @@
+.Login-from {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #212225, #3b3b3e);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.content{
+    color: #333;
+}
+.login-desgin {
+    background-color: white;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 350px;
+}
+
+.login-desgin:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-from {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-from label {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.login-from input {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    color: #333;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-from input:focus {
+    outline: none;
+    border-color: #6e8efb;
+    box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.2);
+}
+
+.login-from input::placeholder {
+    color: #aaa;
+}
+
+.login-btn {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-btn button {
+    background: linear-gradient(135deg, #6e8efb, #b18ae0);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.login-btn button:hover {
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.4);
+}
+
+.login-btn button:active {
+    transform: translateY(0);
+}
