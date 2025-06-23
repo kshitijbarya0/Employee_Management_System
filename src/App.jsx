@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-import Navbar from './Components/Common/Navbar'
 import DashboardEmp from './Components/Employee/DashboardEmp'
 import DashboardAdmin from './Components/Admin/DashboardAdmin'
 import Login from './Components/Auth/login'
@@ -8,14 +7,22 @@ import Login from './Components/Auth/login'
 function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState('Emp');
-  const [empData, setEmpData] = useState("");
-  const [adminData, setAdminData] = useState("");
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user === 'Emp') {
+      setIsLogin(true)
+      setUser('Emp')
+    }
+    if (user === 'admin') {
+      setIsLogin(true)
+      setUser('admin')
+    }
+  })
   return (
     <>
       <div className='Main-content'>
         {
-          // <DashboardEmp empData={empData} />
-          <DashboardAdmin adminData={adminData} />
+          isLogin ? (user === 'Emp' ? (<DashboardEmp />) : (<DashboardAdmin />)) : (<Login setUser={setUser} setIsLogin={setIsLogin} />)
         }
       </div>
     </>

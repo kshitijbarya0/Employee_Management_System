@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './login.css'
-function login({ setUser, setIsLogin, setAdminData, setEmpData }) {
+import { ToastContainer, toast } from 'react-toastify';
+function login({ setUser, setIsLogin }) {
     const loginLogic = ({ email, password }) => {
         const userData = JSON.parse(localStorage.getItem('employeeData'));
         if (userData) {
@@ -11,28 +12,29 @@ function login({ setUser, setIsLogin, setAdminData, setEmpData }) {
             if (userEntry) {
                 const [empKey, empData] = userEntry;
                 localStorage.setItem('loggedInUser', empKey);
+                localStorage.setItem('user', 'Emp')
+                setUser('Emp')
+                setIsLogin(true)
+                toast("Successfully loggedIn!")
                 return [empKey, empData];
             } else {
-                alert("User not found")
+                toast("User not found!")
             }
         } else {
-            alert("Something went wrong. Please try again later.")
+            toast("Something went wrong. Please try again later.")
         }
     }
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const HandleFromSubit = (e) => {
         e.preventDefault();
-        if (email === 'admin@gmail.com') {
-            const Trylogin = loginLogic({ email, password })
+        if (email === 'admin@gmail.com' && password === "admin123") {
             setUser('admin')
-            setIsLogin(prev => !prev)
-            setAdminData(Trylogin)
+            localStorage.setItem('user', 'admin')
+            setIsLogin(true)
+            toast("Successfully loggedIn!")
         } else {
-            const Trylogin = loginLogic({ email, password })
-            setUser('Emp')
-            setIsLogin(prev => !prev)
-            setEmpData(Trylogin)
+            loginLogic({ email, password })
         }
         setEmail('')
         setPassword('')
